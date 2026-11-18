@@ -1,0 +1,4 @@
+# Keep license texts byte-identical (the SHA-256 of LICENSE is checked against the official Apache-2.0 text).
+* text=auto
+LICENSE text eol=lf
+CODE_OF_CONDUCT.md text eol=lf

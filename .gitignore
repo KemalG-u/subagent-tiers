@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jsonl
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+example-project/

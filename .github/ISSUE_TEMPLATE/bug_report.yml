@@ -1,0 +1,43 @@
+name: Bug report
+description: Something does not work as documented
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not report security problems here. Use the private report link on the issue chooser or see SECURITY.md.
+        Never paste secrets, personal data or local file paths.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead? Include the exact error message.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Commands or a minimal example that shows the problem.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "e.g. 0.2.0 or abc1234"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system and runtime version.
+    validations:
+      required: true
+  - type: textarea
+    id: ai-assistance
+    attributes:
+      label: AI assistance (optional)
+      description: If an AI tool helped you write this report or analyse the problem, say so briefly.
