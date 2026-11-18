@@ -11,6 +11,7 @@ The maintainer's standing statement is that he does not write code: AI tools wri
 | Tool / model | Work |
 |---|---|
 | Codex / gpt-6.1-sol | Adapted the source definitions, translated and generalized prompts, wrote documentation and offline tests, executed local checks |
+| Independent AI reviewer: Codex / gpt-6.1-sol, high effort | Read-only review of candidate `6456d614ff85cab8ae807968334c0209d002e068` against the preparation standard and source evidence. Ran the non-writing test classes, reported documentation gaps and did not write package files. This is an additional AI read, not human review or owner acceptance. Coverage of the final candidate is recorded separately outside the package. |
 | Earlier source-authoring tools | The source definitions were supplied from a personal AI-agent setup; precise tool/model provenance is not established by the available source files |
 
 The maintainer chose the publication scope and the use of tier guidance. The AI translated local instructions, renamed roles for general use, removed local policy dependencies, narrowed read-only tools and drafted this package. No raw agent logs are included.

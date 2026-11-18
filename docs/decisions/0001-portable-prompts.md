@@ -2,6 +2,8 @@
 
 Record: contemporaneous, 2026-11-18. Status: proposed adaptation; owner acceptance is separate.
 
+Decision-makers: Codex / gpt-6.1-sol proposed and implemented this preparation's adaptation. Kemal (KarıncaAI) owns acceptance; this record does not assert his acceptance of this candidate.
+
 ## Context
 
 The source definitions included local-language working instructions, a local skill reference and a custom Explore name. Several nominally read-only roles had shell access. A public installation should not require the original person's policy files or silently override a built-in role.

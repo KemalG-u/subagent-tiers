@@ -41,7 +41,7 @@ Registry API reads on 2026-11-18: npm exact package subagent-tiers returned HTTP
 
 ## 5. Independent reading
 
-The final full candidate SHA must be read by a reviewer distinct from the producer. The result and exact SHA belong to the external preparation record; the publication-day result belongs to section 7. Automated checks do not certify owner acceptance.
+The final full candidate SHA must be read by an independent AI reviewer distinct from the producer. This additional AI read is not a human review or owner acceptance. The result and exact SHA belong to the external preparation record; the publication-day result belongs to section 7. Automated checks do not certify owner acceptance.
 
 ## 6. Limits
 
