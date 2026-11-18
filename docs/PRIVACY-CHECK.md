@@ -66,5 +66,22 @@ Published 2026-11-18 as https://github.com/KemalG-u/subagent-tiers (visibility p
 | Scans repeated on published history | at `df1f099`: Betterleaks 1.10.1 and TruffleHog 3.99.9, git history and working directory, 0 findings each; verification and update features off |
 | Repository description and topics | description equals the first sentence of the README; topics: agent-skills, ai-agents, claude-code, model-routing, subagents |
 | Profile page | the maintainer's profile README lists this repository ("New: subagent-tiers", commit `57993f6` in the profile repository), and the repository is pinned (GraphQL `pinnedItems` read: look-before-you-code, prove-it-review, subagent-tiers) |
-| Release and tag | none: no `v0.1.0` tag and no GitHub release exist, while `CHANGELOG.md` has a 0.1.0 section |
-| `CHANGELOG.md` | generated for `v0.1.0` with git-cliff 2.14.2 during preparation. It was not regenerated after publication: the tool was not run in the publication update, and the commits after publication are `docs:` commits, which `cliff.toml` skips (an inference from the configuration, not a run) |
+| Release and tag at the first push | none at the first push; the `v0.1.0` tag and the GitHub release were created afterwards (see the hosted state below) |
+| `CHANGELOG.md` | generated for `v0.1.0` with git-cliff 2.14.2 during preparation. It was not regenerated after publication: the tool was not run in the publication update, and the commits after publication are `docs:` commits, which `cliff.toml` skips (an inference from the configuration, not a run). `v0.1.0` is now an actual tag (see the hosted state below); this update did not change `CHANGELOG.md`. |
+
+### Hosted state after the `v0.1.0` tag
+
+The tag `v0.1.0` and the GitHub release were created on 2026-11-18 at `a40b8fc6d496e719320a20f1c8877948288671ef`, the tip of `main` at that time. `CHANGELOG.md` already had a 0.1.0 section; `v0.1.0` is now a real tag, and this update did not change `CHANGELOG.md`. The table below was generated from a saved read-only GitHub API response of 2026-11-19, taken while `main` was still at that commit. This documentation update and the metrics commit that follows it came after the tag: `main` is ahead of `v0.1.0` by those commits. The tag was not moved and no new tag was created.
+
+| Item | State |
+|---|---|
+| Read | GitHub API read on 2026-11-19 (mode: read-only) for KemalG-u/subagent-tiers |
+| Publication | https://github.com/KemalG-u/subagent-tiers (visibility=public private=False; fork=False) |
+| Branch tip | `main` was at `a40b8fc6d496e719320a20f1c8877948288671ef` when read |
+| CI on the branch tip | workflow "CI" (`.github/workflows/ci.yml`), run 44374961457, event push, conclusion success, commit `a40b8fc6d496e719320a20f1c8877948288671ef`: https://github.com/KemalG-u/subagent-tiers/actions/runs/44374961457 |
+| Security settings | secret scanning: enabled; push protection: enabled; private vulnerability reporting: enabled; Dependabot alerts: enabled; Dependabot security updates: disabled |
+| Topics | 5: agent-skills, ai-agents, claude-code, model-routing, subagents |
+| Community health | health percentage 100; readme, license, contributing, code_of_conduct present |
+| Release and tag | tag `v0.1.0` points to `a40b8fc6d496e719320a20f1c8877948288671ef` (lightweight); GitHub release published: https://github.com/KemalG-u/subagent-tiers/releases/tag/v0.1.0; tag equals the `main` tip read |
+| Profile pin | 3 pinned items; this repository is among them |
+| Profile README | profile README mentions the repository |
