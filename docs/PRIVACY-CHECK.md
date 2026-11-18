@@ -26,7 +26,7 @@ Positive control: a separate synthetic repository contains a randomly generated 
 
 A private static checker (version 2.1), run in strict mode, recorded 0 missing standard files and 0 path/e-mail/template findings. Raw transcript files, secret-like filenames and excluded-name files were all 0 according to that tool. Its only initial documentation warning was the deliberately empty metrics file; metrics are generated after the content commit. Final strict-check results are retained in the external preparation record.
 
-All agent definitions were read manually for local instructions, policy references and paths. Intentional maintainer-name occurrences belong to copyright/AI-use attribution and the project GitHub URLs. The `KEMAL-VERIFY` marker identifies an origin-date question for the maintainer, not a completed human check. It is not an authorization statement.
+All agent definitions were read manually for local instructions, policy references and paths. Intentional maintainer-name occurrences belong to copyright/AI-use attribution and the project GitHub URLs. The source collection's origin date is unknown (not recorded); file timestamps are not treated as proof of origin.
 
 ## 4. Legal and naming checks
 
@@ -62,4 +62,4 @@ Release day: pending. Published commit: pending.
 | Dependabot alerts | pending |
 | GitHub dependency graph/SBOM export | pending |
 | Scans repeated on published history | pending |
-| Changelog generated using git-cliff | pending |
+| Changelog generated using git-cliff | Generated during preparation with git-cliff 2.14.2; repeat on release day |

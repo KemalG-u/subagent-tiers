@@ -28,7 +28,7 @@ The AI, not the human maintainer, ran these preparation checks. Tests do not cal
 
 ## Unknowns
 
-- KEMAL-VERIFY: when did this particular source agent collection first begin? File timestamps are not accepted as proof of its origin.
+- Origin date: unknown (not recorded). File timestamps are not accepted as proof of its origin.
 - Exact creation history and authorship of individual source passages are not reconstructed from transcripts.
 - The standing human-review declaration is the maintainer's statement; the exact candidate's human review must not be inferred from automated checks.
 
