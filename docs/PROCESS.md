@@ -4,7 +4,7 @@ Record: contemporaneous preparation record, 2026-11-18; original development his
 
 ## Export choice
 
-A fresh repository preserves the selected source concepts rather than the private setup's history. Only the selected agent definitions were inputs; private policy agents, credentials, configuration, transcripts and operational logs were excluded. No remote is needed to prepare or test this tree. The publication identity uses the maintainer's GitHub noreply address.
+A fresh repository preserves the selected source concepts rather than the private setup's history. Only the selected agent definitions were inputs; private policy agents, credentials, configuration, transcripts and operational logs were excluded. No remote was needed to prepare or test this tree; the repository was published afterwards. The publication identity uses the maintainer's GitHub noreply address.
 
 ## Preparation stages
 
