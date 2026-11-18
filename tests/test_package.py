@@ -1,7 +1,7 @@
 """Offline package checks; no model calls or third-party dependencies.
 
-Installation checks retain their newly created scratch directory rather than
-deleting files. The operating system's temp-directory policy controls its life.
+Installation checks work in temporary scratch directories, which are removed
+when each check finishes.
 """
 
 import hashlib

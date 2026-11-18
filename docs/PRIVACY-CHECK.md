@@ -56,7 +56,8 @@ Release day: pending. Published commit: pending.
 | Item | Status |
 |---|---|
 | Independent final reading, exact full SHA | pending |
-| Owner acceptance and release authorization | pending |
+| Release authorization | given by the maintainer on 2026-11-18 |
+| Owner acceptance of the exact release SHA | pending |
 | First CI run on the candidate | pending |
 | Secret scanning | pending |
 | Push protection | pending |

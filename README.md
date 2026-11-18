@@ -15,21 +15,29 @@ From the cloned repository, copy the definitions into a **new, empty** project a
 PowerShell:
 
 ```powershell
-$target = Join-Path $PWD 'example-project/.claude/agents'
-if (Test-Path -LiteralPath $target) { throw 'Choose a new empty project directory' }
-New-Item -ItemType Directory -Path $target -Force | Out-Null
-Copy-Item -LiteralPath (Get-ChildItem -LiteralPath ./agents -Filter '*.md').FullName -Destination $target
-Get-ChildItem -LiteralPath $target -Filter '*.md' | Sort-Object Name | Select-Object -ExpandProperty Name
+if (Test-Path -LiteralPath 'example-project/.claude/agents') {
+  Write-Error 'example-project/.claude/agents already exists; choose a new empty project directory'
+} else {
+  $target = Join-Path $PWD 'example-project/.claude/agents'
+  New-Item -ItemType Directory -Path $target -Force | Out-Null
+  Copy-Item -LiteralPath (Get-ChildItem -LiteralPath ./agents -Filter '*.md').FullName -Destination $target
+  Get-ChildItem -LiteralPath $target -Filter '*.md' | Sort-Object Name | Select-Object -ExpandProperty Name
+}
 ```
 
 POSIX shell (also from the cloned repository):
 
 ```sh
-test ! -e example-project/.claude/agents || { echo 'exists' >&2; false; }
-mkdir -p example-project/.claude/agents
-cp agents/*.md example-project/.claude/agents/
-ls example-project/.claude/agents/
+if [ -e example-project/.claude/agents ]; then
+  echo 'example-project/.claude/agents already exists; choose a new empty project directory' >&2
+else
+  mkdir -p example-project/.claude/agents &&
+    cp agents/*.md example-project/.claude/agents/ &&
+    ls example-project/.claude/agents/
+fi
 ```
+
+Each block is a single `if`/`else` command, so nothing is copied when the target already exists, even if the lines are pasted one at a time.
 
 Expected filenames (ordering may vary):
 

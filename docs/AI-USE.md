@@ -12,11 +12,12 @@ The maintainer's standing statement is that the maintainer does not write code: 
 |---|---|
 | Codex / gpt-6.1-sol | Adapted the source definitions, translated and generalized prompts, wrote documentation and offline tests, executed local checks |
 | Independent AI reader: Codex / gpt-6.1-sol, high effort | Read-only reviews that wrote no package file. Read candidate `6456d614ff85cab8ae807968334c0209d002e068` against the preparation standard and source evidence and reported documentation gaps, then read the full package again at `4853dc415874f049ac4836af82795d6097939c37`. Ran the non-writing test classes. These are AI reads, not human review or owner acceptance. Results and SHAs are recorded outside the package. |
-| Claude Code (Claude Opus 5.5, Anthropic) | Independent AI reader, read-only, wrote no package file; result and SHA recorded outside the package. This is an AI read, not human review or owner acceptance. |
-| Claude Code (Claude Sonnet 5.5, Anthropic) | Applied documentation and test-hygiene fixes after the independent reads, and regenerated the changelog and metrics with the documented tools. |
+| Claude Code (Claude Opus 5.5, Anthropic), independent AI reader | Read-only, wrote no package file. Read the full package, then read the changes of the first fix round; each result and SHA recorded outside the package. These are AI reads, not human review or owner acceptance. |
+| Claude Code (Claude Sonnet 5.5, Anthropic), first fix round | Applied documentation and test-hygiene fixes after the independent reads; regenerated metrics with the documented tool; re-ran the changelog tool, which produced no change. |
+| Claude Code (Claude Opus 5.5, Anthropic), second fix round | Applied fixes after the second Claude read: rewrote both installation snippets as a single if/else command and ran them against an empty and an occupied target; corrected documentation and the test docstring; regenerated metrics with the documented tool. Commits and checks recorded outside the package. |
 | Earlier source-authoring tools | The source definitions were supplied from a personal AI-agent setup; precise tool/model provenance is not established by the available source files |
 
-The eight-definition scope was selected during preparation planning; the maintainer authorized publication of this package. The AI translated local instructions, renamed roles for general use, removed local policy dependencies, narrowed read-only tools and drafted this package. No raw agent logs are included.
+The eight-definition scope was selected during preparation planning. The AI translated local instructions, renamed roles for general use, removed local policy dependencies, narrowed read-only tools and drafted this package. No raw agent logs are included.
 
 ## Verification
 
