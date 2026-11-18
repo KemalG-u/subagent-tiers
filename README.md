@@ -25,7 +25,7 @@ Get-ChildItem -LiteralPath $target -Filter '*.md' | Sort-Object Name | Select-Ob
 POSIX shell (also from the cloned repository):
 
 ```sh
-test ! -e example-project/.claude/agents || exit 1
+test ! -e example-project/.claude/agents || { echo 'exists' >&2; false; }
 mkdir -p example-project/.claude/agents
 cp agents/*.md example-project/.claude/agents/
 ls example-project/.claude/agents/
@@ -74,7 +74,7 @@ The [K0–K3 guide](docs/TIERS.md) explains escalation, a complete handoff examp
 python -B -m unittest discover -s tests -v
 ```
 
-Tests check the packaged definitions, project-scoped installation from a clean copy, name/tool boundaries and documentation links. They do not invoke an AI service or prove model behavior. Generated measurements: [docs/METRICS.md](docs/METRICS.md).
+Tests check the packaged definitions, project-scoped installation from a clean copy, name/tool boundaries and relative documentation links. They do not invoke an AI service or prove model behavior. Generated measurements: [docs/METRICS.md](docs/METRICS.md).
 
 ## How it was built
 

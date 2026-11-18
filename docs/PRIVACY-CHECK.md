@@ -6,7 +6,7 @@ Check date: 2026-11-18. Record: contemporaneous preparation checks. Raw scanner 
 
 A fresh repository contains adapted definitions and new documentation/tests rather than the source setup's history. Only the selected agent files were read as package inputs; the owner's standing exclusion list dated 2026-11-18 was applied. No excluded source directory was traversed. Private policy agents, raw conversations, credentials, host configuration and tool output are not bundled. Source file hashes are compared before and after preparation outside this tree.
 
-The commit identity is the maintainer's approved publication identity, using `users.noreply.github.com`. No remotes are added during preparation.
+The commit identity is the maintainer's GitHub noreply identity, using `users.noreply.github.com`. No remotes are added during preparation.
 
 ## 2. Secret scanning
 
@@ -16,6 +16,8 @@ The commit identity is the maintainer's approved publication identity, using `us
 | trufflehog 3.99.9 | full history at `fad74180779ade2102ba9d1f63a40193986e8728` | 0 | completed |
 | betterleaks 1.10.1 | working directory at that commit, including an ignored installed-layout example | 0 | exit 0 |
 | trufflehog 3.99.9 | working directory at that commit, including an ignored installed-layout example | 0 | exit 0 |
+
+The table shows the first checked candidate. The same scans, with the same scanner versions and with verification disabled, were repeated on later candidates over the full history and the working directory, each with 0 findings. Those results are kept outside the package.
 
 Positive-control findings (git / directory): Betterleaks 1 / 1; TruffleHog 1 / 2. Filesystem scanning can include Git object data, so these are findings, not unique credential counts.
 TruffleHog git mode produced a Windows termination warning; the instrumented Git event check recorded complete start/end coverage and zero command failures. No detector/scan error category was reported. The warning is not silently discarded.
@@ -34,7 +36,7 @@ All agent definitions were read manually for local instructions, policy referenc
 |---|---|---|
 | Name and trademark | The GitHub exact-name check found no other-owner repository named subagent-tiers. A web search found a differently named scoped package, @pure01fx/dsh-subagent-tiers-hu. Registry API results are recorded below. No official trademark database was searched. Interpretation: this is a practical naming search, not trademark clearance or legal advice. | 2026-11-18; GitHub name search and web search for the exact phrase |
 | Dependency/license inventory | Agent definitions are plain Markdown. Tests import only Python standard-library modules. CI references checkout and setup-python by full commit SHA; these are not bundled. Contributor Covenant attribution is preserved in the conduct document and NOTICE. No third-party runtime library is bundled. | 2026-11-18; imports in tests/test_package.py and workflow source |
-| Employer/client IP | The maintainer's standing statement is that this is personal work without employer/client code, data or working time. This records his statement; the AI cannot attest ownership independently. | Maintainer's standing answer, 2026-11-18 |
+| Employer/client IP | The maintainer's standing statement is that this is personal work without employer/client code, data or working time. This records the maintainer's statement; the AI cannot attest ownership independently. | Maintainer's standing answer, 2026-11-18 |
 | Encryption/export note | No cryptographic implementation is bundled. Tests use the standard library's hash function to compare copied file bytes. Interpretation: this is not a formal export-law assessment. | 2026-11-18; test imports and agent files |
 
 Registry API reads on 2026-11-18: npm exact package subagent-tiers returned HTTP 404; PyPI exact project subagent-tiers returned HTTP 404. No package registry publication is part of this project.

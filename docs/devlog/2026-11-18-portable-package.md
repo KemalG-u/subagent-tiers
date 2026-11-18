@@ -12,7 +12,10 @@ The package translates and generalizes the prompts, gives broad search a distinc
 
 ## Failed attempts and omissions
 
-No live model behavior check was attempted; no failure or success is inferred. Offline installation testing cannot validate real model selection, account availability or prompt adherence. The package's parser has an explicit negative fixture to prove it rejects missing frontmatter.
+- The first offline test run had one failure: the documentation links check found a link to the metrics file, which did not exist yet. It was fixed and the tests were rerun.
+- Changelog generation was blocked for one round because `git-cliff` was not available to the preparation. It was generated in a later round with git-cliff 2.14.2.
+- An independent AI reading found two documentation gaps (the independent reader was not listed in the AI-use record, and the design decision did not state who proposed it); both were closed in `a5f1776`.
+- No live model behavior check was attempted; no failure or success is inferred. Offline installation testing cannot validate real model selection, account availability or prompt adherence. The package's parser has an explicit negative fixture to prove it rejects missing frontmatter.
 
 ## Evidence
 

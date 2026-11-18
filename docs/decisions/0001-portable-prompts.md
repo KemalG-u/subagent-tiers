@@ -2,7 +2,7 @@
 
 Record: contemporaneous, 2026-11-18. Status: proposed adaptation; owner acceptance is separate.
 
-Decision-makers: Codex / gpt-6.1-sol proposed and implemented this preparation's adaptation. Kemal (KarıncaAI) owns acceptance; this record does not assert his acceptance of this candidate.
+Decision-makers: Codex / gpt-6.1-sol proposed and implemented this preparation's adaptation. Kemal (KarıncaAI) owns acceptance; this record does not assert the owner's acceptance of this candidate.
 
 ## Context
 

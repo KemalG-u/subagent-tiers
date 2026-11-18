@@ -4,17 +4,19 @@ Maintainer: Kemal (KarıncaAI). Record: reconstructed on 2026-11-18 from the sou
 
 ## Standing declaration
 
-The maintainer's standing statement is that he does not write code: AI tools write code and documents. He sets the direction and rules and reviews and checks every change. This is a personal project, without employer or client code, data or working time. That statement describes his working arrangement; it is not evidence that he has personally read this exact candidate. Review depth per change is not measured, and candidate-specific acceptance must be recorded separately.
+The maintainer's standing statement is that the maintainer does not write code: AI tools write code and documents, while the maintainer sets the direction and rules and looks at every change. This is a personal project, without employer or client code, data or working time. That statement describes the maintainer's working arrangement; it is not evidence that the maintainer has personally read this exact candidate. Review depth per change is not measured, and candidate-specific acceptance must be recorded separately.
 
 ## Work in this package
 
 | Tool / model | Work |
 |---|---|
 | Codex / gpt-6.1-sol | Adapted the source definitions, translated and generalized prompts, wrote documentation and offline tests, executed local checks |
-| Independent AI reviewer: Codex / gpt-6.1-sol, high effort | Read-only review of candidate `6456d614ff85cab8ae807968334c0209d002e068` against the preparation standard and source evidence. Ran the non-writing test classes, reported documentation gaps and did not write package files. This is an additional AI read, not human review or owner acceptance. Coverage of the final candidate is recorded separately outside the package. |
+| Independent AI reader: Codex / gpt-6.1-sol, high effort | Read-only reviews that wrote no package file. Read candidate `6456d614ff85cab8ae807968334c0209d002e068` against the preparation standard and source evidence and reported documentation gaps, then read the full package again at `4853dc415874f049ac4836af82795d6097939c37`. Ran the non-writing test classes. These are AI reads, not human review or owner acceptance. Results and SHAs are recorded outside the package. |
+| Claude Code (Claude Opus 5.5, Anthropic) | Independent AI reader, read-only, wrote no package file; result and SHA recorded outside the package. This is an AI read, not human review or owner acceptance. |
+| Claude Code (Claude Sonnet 5.5, Anthropic) | Applied documentation and test-hygiene fixes after the independent reads, and regenerated the changelog and metrics with the documented tools. |
 | Earlier source-authoring tools | The source definitions were supplied from a personal AI-agent setup; precise tool/model provenance is not established by the available source files |
 
-The maintainer chose the publication scope and the use of tier guidance. The AI translated local instructions, renamed roles for general use, removed local policy dependencies, narrowed read-only tools and drafted this package. No raw agent logs are included.
+The eight-definition scope was selected during preparation planning; the maintainer authorized publication of this package. The AI translated local instructions, renamed roles for general use, removed local policy dependencies, narrowed read-only tools and drafted this package. No raw agent logs are included.
 
 ## Verification
 
@@ -34,6 +36,6 @@ The AI, not the human maintainer, ran these preparation checks. Tests do not cal
 
 ## Commit and copyright practice
 
-Commits record AI assistance with `Assisted-by: Codex`. AI tools do not add `Signed-off-by` or attest human acceptance. The public history is a fresh preparation history rather than a copy of private setup history.
+Commits record AI assistance with an `Assisted-by:` trailer. Early commits used `Assisted-by: Codex` without a model name (the model is recorded in the table above instead); later commits use `Assisted-by: Claude Code`. History was not rewritten to make the trailers uniform. AI tools do not add `Signed-off-by` or attest human acceptance. The public history is a fresh preparation history rather than a copy of private setup history.
 
 Interpretation: the human contribution is direction, specification, selection and arrangement, and review under the standing declaration. Purely machine-generated passages may lack copyright protection. AI-written share and review depth are not measured. This record is not a quality guarantee.

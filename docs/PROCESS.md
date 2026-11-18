@@ -21,6 +21,6 @@ The source-to-public role mapping is discovery, implementer, reviewer, research-
 
 Offline tests validate frontmatter, names, tools, links and installation into an otherwise empty project agent directory. A deliberately malformed definition exercises the parser's rejection path. The read-only definitions are deliberately unable to run shell diagnostics or data scripts; the caller supplies runtime evidence.
 
-No paid model calls or live agent delegations were performed during preparation. The tests establish an offline package property, not end-to-end model behavior. No runtime failure story is invented: no such check was attempted. The preparation log records concrete changes and constraints rather than reconstructing a narrative from unknown history.
+No paid model calls or live agent delegations were performed during preparation. The tests establish an offline package property, not end-to-end model behavior. Setbacks during preparation are listed in the [preparation log](devlog/2026-11-18-portable-package.md). No runtime failure story is invented: no live model check was attempted. The preparation log records concrete changes and constraints rather than reconstructing a narrative from unknown history.
 
 Interpretation: tier guidance may improve task assignment, but this package provides no measured performance or quality comparison. Recheck dated aliases and supported tool names when using a different Claude Code version.

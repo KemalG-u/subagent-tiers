@@ -78,26 +78,26 @@ class DefinitionTests(unittest.TestCase):
 
 class InstallationTests(unittest.TestCase):
     def test_copy_to_clean_project(self):
-        scratch = Path(tempfile.mkdtemp(prefix="subagent-tiers-check-"))
-        installed = scratch / "project/.claude/agents"
-        installed.mkdir(parents=True)
-        for source in (ROOT / "agents").glob("*.md"):
-            shutil.copyfile(source, installed / source.name)
-        self.assertEqual({p.stem for p in installed.glob("*.md")}, EXPECTED)
-        for name in EXPECTED:
-            source = ROOT / "agents" / (name + ".md")
-            target = installed / source.name
-            self.assertEqual(hashlib.sha256(source.read_bytes()).digest(), hashlib.sha256(target.read_bytes()).digest())
-            fields, body = read_definition(target)
-            self.assertEqual(fields["name"], name)
-            self.assertTrue(body.strip())
+        with tempfile.TemporaryDirectory(prefix="subagent-tiers-check-") as scratch:
+            installed = Path(scratch) / "project/.claude/agents"
+            installed.mkdir(parents=True)
+            for source in (ROOT / "agents").glob("*.md"):
+                shutil.copyfile(source, installed / source.name)
+            self.assertEqual({p.stem for p in installed.glob("*.md")}, EXPECTED)
+            for name in EXPECTED:
+                source = ROOT / "agents" / (name + ".md")
+                target = installed / source.name
+                self.assertEqual(hashlib.sha256(source.read_bytes()).digest(), hashlib.sha256(target.read_bytes()).digest())
+                fields, body = read_definition(target)
+                self.assertEqual(fields["name"], name)
+                self.assertTrue(body.strip())
 
     def test_positive_control_rejects_bad_definition(self):
-        scratch = Path(tempfile.mkdtemp(prefix="subagent-tiers-negative-"))
-        broken = scratch / "broken.md"
-        broken.write_text("Instructions without frontmatter", encoding="utf-8")
-        with self.assertRaises(ValueError):
-            read_definition(broken)
+        with tempfile.TemporaryDirectory(prefix="subagent-tiers-negative-") as scratch:
+            broken = Path(scratch) / "broken.md"
+            broken.write_text("Instructions without frontmatter", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                read_definition(broken)
 
 
 class DocumentationTests(unittest.TestCase):

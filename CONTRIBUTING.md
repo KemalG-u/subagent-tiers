@@ -10,7 +10,7 @@ Use Python 3.11 or newer. No extra Python packages are needed.
 python -B -m unittest discover -s tests -v
 ```
 
-Tests run offline and retain newly created scratch installation directories under your operating system's temporary directory; they never copy credentials or invoke a model. Check the changed role in a project-scoped agent directory before claiming runtime compatibility. Do not overwrite existing definitions. Include the Claude Code version and model route if you report a runtime check.
+Tests run offline and create scratch installation directories under your operating system's temporary directory, which are removed when each test ends; they never copy credentials or invoke a model. Check the changed role in a project-scoped agent directory before claiming runtime compatibility. Do not overwrite existing definitions. Include the Claude Code version and model route if you report a runtime check.
 
 Update the role, tier guide, tests and installation instructions together when behavior changes. Use Conventional Commits (`feat:`, `fix:`, `docs:`, `test:`); `git-cliff` generates the changelog from these subjects.
 
