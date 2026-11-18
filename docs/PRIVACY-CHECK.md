@@ -10,13 +10,21 @@ The commit identity is the maintainer's approved publication identity, using `us
 
 ## 2. Secret scanning
 
-SCAN-RESULTS
+| Scanner/version | Scope | Finding count | Result |
+|---|---|---|---|
+| betterleaks 1.10.1 | full history at `fad74180779ade2102ba9d1f63a40193986e8728` | 0 | completed |
+| trufflehog 3.99.9 | full history at `fad74180779ade2102ba9d1f63a40193986e8728` | 0 | completed |
+| betterleaks 1.10.1 | working directory at that commit, including an ignored installed-layout example | 0 | exit 0 |
+| trufflehog 3.99.9 | working directory at that commit, including an ignored installed-layout example | 0 | exit 0 |
+
+Positive-control findings (git / directory): Betterleaks 1 / 1; TruffleHog 1 / 2. Filesystem scanning can include Git object data, so these are findings, not unique credential counts.
+TruffleHog git mode produced a Windows termination warning; the instrumented Git event check recorded complete start/end coverage and zero command failures. No detector/scan error category was reported. The warning is not silently discarded.
 
 Positive control: a separate synthetic repository contains a randomly generated token-shaped string, not a credential. The control stays outside this repository. Verification and update features are disabled; no credential is sent to a provider. Scans retain only allowlisted metadata and counts, never secret values or raw output.
 
 ## 3. Personal data and local references
 
-PATH-RESULTS
+A private static checker (version 2.1), run in strict mode, recorded 0 missing standard files and 0 path/e-mail/template findings. Raw transcript files, secret-like filenames and excluded-name files were all 0 according to that tool. Its only initial documentation warning was the deliberately empty metrics file; metrics are generated after the content commit. Final strict-check results are retained in the external preparation record.
 
 All agent definitions were read manually for local instructions, policy references and paths. Intentional maintainer-name occurrences belong to copyright/AI-use attribution and the project GitHub URLs. The `KEMAL-VERIFY` marker identifies an origin-date question for the maintainer, not a completed human check. It is not an authorization statement.
 
@@ -29,7 +37,7 @@ All agent definitions were read manually for local instructions, policy referenc
 | Employer/client IP | The maintainer's standing statement is that this is personal work without employer/client code, data or working time. This records his statement; the AI cannot attest ownership independently. | Maintainer's standing answer, 2026-11-18 |
 | Encryption/export note | No cryptographic implementation is bundled. Tests use the standard library's hash function to compare copied file bytes. Interpretation: this is not a formal export-law assessment. | 2026-11-18; test imports and agent files |
 
-REGISTRY-RESULTS
+Registry API reads on 2026-11-18: npm exact package subagent-tiers returned HTTP 404; PyPI exact project subagent-tiers returned HTTP 404. No package registry publication is part of this project.
 
 ## 5. Independent reading
 
