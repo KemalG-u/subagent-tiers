@@ -1,3 +1,5 @@
+> **Status: active, v0.1.0 (pre-1.0).** Interfaces may change.
+
 # Subagent Tiers
 
 Reusable Claude Code agent definitions with a guide for matching work to evidence, risk and review needs.
