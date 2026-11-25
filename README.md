@@ -8,6 +8,8 @@ Reusable Claude Code agent definitions with a guide for matching work to evidenc
 
 Use this when one assistant keeps switching between finding files, writing changes and judging its own work. For example: ask `discovery` to locate a broken setting, assign a bounded fix to `implementer`, then give `reviewer` the diff and acceptance criteria. You remain responsible for permissions, execution and acceptance.
 
+How this differs from [prove-it-review](https://github.com/KemalG-u/prove-it-review): that repository is a single review procedure (a skill plus a reviewer subagent) and a small calculator; this one is a set of reusable agent definitions covering discovery, implementation and review.
+
 ## Install
 
 Requires Claude Code with custom Markdown subagents. The definitions use documented model aliases; availability and supported effort levels depend on your account and runtime. See [the official documentation](https://code.claude.com/docs/en/sub-agents). Python 3.11 or newer is needed only for the offline package tests, with no third-party Python dependencies.
